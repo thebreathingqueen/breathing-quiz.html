@@ -6,7 +6,6 @@
 <title>Breathing Pattern Dysfunction Quiz</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* Global */
 body {
   background-color: #F5E8D0;
   font-family: 'Playfair Display', serif;
@@ -18,7 +17,6 @@ body {
   min-height: 100vh;
 }
 
-/* Quiz container */
 .quiz-container {
   background: #fff9f2;
   padding: 40px 30px;
@@ -43,7 +41,6 @@ body {
   margin-bottom: 30px;
 }
 
-/* Questions */
 .question {
   margin-bottom: 25px;
 }
@@ -54,7 +51,6 @@ body {
   margin-bottom: 10px;
 }
 
-/* Options */
 .options label {
   display: block;
   padding: 8px 12px;
@@ -73,7 +69,6 @@ body {
   background-color: #F0D9B8;
 }
 
-/* Submit button */
 .submit-btn {
   display: block;
   width: 100%;
@@ -92,17 +87,25 @@ body {
   background-color: #A67145;
 }
 
-/* Result */
 .result {
   margin-top: 30px;
   padding: 25px;
-  background-color: #fff3e0;
   border-radius: 15px;
+  background-color: #fff3e0;
   color: #4A3F38;
   font-size: 1.1rem;
 }
 
-/* Mobile responsiveness */
+a {
+  color: #8B5E3C;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .quiz-container {
     padding: 25px 20px;
@@ -119,7 +122,7 @@ body {
 
 <div class="quiz-container">
   <h1>Breathing Pattern Dysfunction Quiz</h1>
-  <p class="description">Welcome! This short quiz will help you gain insight into your breathing habits and patterns. Complete all questions to receive your personalized guidance.</p>
+  <p class="description">Welcome! This short quiz will help you gain insight into your breathing habits and patterns. Complete all questions to receive personalized guidance.</p>
 
   <form id="quizForm">
     <!-- Question 1 -->
@@ -127,8 +130,8 @@ body {
       <p>1. During activity or exercise, how does your breathing feel?</p>
       <div class="options">
         <label><input type="radio" name="q1" value="0" required> Controlled</label>
-        <label><input type="radio" name="q1" value="2"> Some difficulty</label>
-        <label><input type="radio" name="q1" value="4"> Quickly limiting</label>
+        <label><input type="radio" name="q1" value="1"> Some difficulty</label>
+        <label><input type="radio" name="q1" value="2"> Quickly limiting</label>
       </div>
     </div>
 
@@ -137,8 +140,8 @@ body {
       <p>2. Overall, how much do breathing issues affect your daily life?</p>
       <div class="options">
         <label><input type="radio" name="q2" value="0" required> Not at all</label>
-        <label><input type="radio" name="q2" value="2"> Occasionally</label>
-        <label><input type="radio" name="q2" value="4"> Frequently or significantly</label>
+        <label><input type="radio" name="q2" value="1"> Occasionally</label>
+        <label><input type="radio" name="q2" value="2"> Frequently or significantly</label>
       </div>
     </div>
 
@@ -254,17 +257,17 @@ document.getElementById('quizForm').addEventListener('submit', function(e){
   let resultText = '';
 
   if(totalScore <= 7){
-    resultText = `<h2>Low Risk: ✅ Programme 3 - Optimisation</h2>
-    <p>Your breathing appears generally healthy, but small improvements can make a big difference. Strengthen habits with the <a href="#">Foundations of Optimal Breathing PDF</a>, including daily exercises and posture tips.</p>`;
+    resultText = `<h2>Low Risk: ✅ Breathing Optimisation</h2>
+      <p>Your breathing appears generally healthy. The <strong>Breathing Optimisation Program</strong> is available to purchase to help you fine-tune your habits and maintain healthy breathing patterns.</p>
+      <p>Use discount code <strong>Breathe15</strong> for 15% off your program purchase!</p>`;
   } else if(totalScore <= 16){
-    resultText = `<h2>Medium Risk: ⚠️ Programme 2 - Alignment</h2>
-    <p>Your breathing shows mild dysfunction. Structured retraining can improve energy, reduce tension, and restore efficient breathing.</p>
-    <p>Download the <a href="#">Essential Breathing Retraining Program PDF</a> with step-by-step exercises, symptom tracking, and practical tips.</p>
-    <p>For personalized guidance, book a session <a href="https://thebreathingqueen.setmore.com/naomh" target="_blank">here</a>.</p>`;
+    resultText = `<h2>Medium Risk: ⚠️ Breathing Alignment</h2>
+      <p>Your breathing shows mild dysfunction. The <strong>Breathing Alignment Program</strong> is available to purchase to help restore efficient breathing patterns, improve energy, and reduce tension.</p>
+      <p>Use discount code <strong>Breathe15</strong> for 15% off your program purchase!</p>`;
   } else {
-    resultText = `<h2>High Risk: 🚨 Programme 1 - Foundations</h2>
-    <p>Significant breathing dysfunction detected. Following a structured program is important to restore healthy patterns and prevent worsening symptoms.</p>
-    <p>For one-on-one support, book a session <a href="https://thebreathingqueen.setmore.com/naomh" target="_blank">here</a>.</p>`;
+    resultText = `<h2>High Risk: 🚨 Breathing Foundations</h2>
+      <p>Significant breathing dysfunction detected. The <strong>Breathing Foundations Program</strong> is available to purchase to provide structured guidance and restore healthy breathing patterns.</p>
+      <p>Use discount code <strong>Breathe15</strong> for 15% off your program purchase!</p>`;
   }
 
   resultDiv.innerHTML = resultText;
