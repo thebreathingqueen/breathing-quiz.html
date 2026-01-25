@@ -4,24 +4,122 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Breathing Pattern Dysfunction Quiz</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
-  .quiz-container { background: #fff; padding: 20px; border-radius: 10px; max-width: 700px; margin: auto; }
-  h1 { text-align: center; }
-  .question { margin-bottom: 20px; }
-  .options label { display: block; margin-bottom: 5px; cursor: pointer; }
-  button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
-  .result { margin-top: 20px; padding: 20px; border-radius: 10px; background: #e0e0e0; }
-  a { color: #007bff; text-decoration: none; }
+/* Global */
+body {
+  background-color: #F5E8D0;
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Quiz container */
+.quiz-container {
+  background: #fff9f2;
+  padding: 40px 30px;
+  margin: 50px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  max-width: 700px;
+  width: 100%;
+}
+
+.quiz-container h1 {
+  text-align: center;
+  color: #8B5E3C;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.quiz-container p.description {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #4A3F38;
+  margin-bottom: 30px;
+}
+
+/* Questions */
+.question {
+  margin-bottom: 25px;
+}
+
+.question p {
+  font-weight: 500;
+  color: #4A3F38;
+  margin-bottom: 10px;
+}
+
+/* Options */
+.options label {
+  display: block;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  background-color: #F5E8D0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.options input[type="radio"] {
+  margin-right: 10px;
+}
+
+.options label:hover {
+  background-color: #F0D9B8;
+}
+
+/* Submit button */
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #8B5E3C;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #A67145;
+}
+
+/* Result */
+.result {
+  margin-top: 30px;
+  padding: 25px;
+  background-color: #fff3e0;
+  border-radius: 15px;
+  color: #4A3F38;
+  font-size: 1.1rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .quiz-container {
+    padding: 25px 20px;
+    margin: 20px 10px;
+  }
+
+  .quiz-container h1 {
+    font-size: 2rem;
+  }
+}
 </style>
 </head>
 <body>
 
 <div class="quiz-container">
   <h1>Breathing Pattern Dysfunction Quiz</h1>
-  <p>Welcome! This short quiz will help you gain insight into your breathing habits and patterns.</p>
-  <p>By the end, you’ll receive personalised feedback and guidance, along with options to book a session or explore helpful resources to support your breathing and wellbeing.</p>
-  <p>This quiz is informational and educational only and is not a medical diagnosis.</p>
+  <p class="description">Welcome! This short quiz will help you gain insight into your breathing habits and patterns. Complete all questions to receive your personalized guidance.</p>
 
   <form id="quizForm">
     <!-- Question 1 -->
@@ -29,8 +127,8 @@
       <p>1. During activity or exercise, how does your breathing feel?</p>
       <div class="options">
         <label><input type="radio" name="q1" value="0" required> Controlled</label>
-        <label><input type="radio" name="q1" value="1"> Some difficulty</label>
-        <label><input type="radio" name="q1" value="2"> Quickly limiting</label>
+        <label><input type="radio" name="q1" value="2"> Some difficulty</label>
+        <label><input type="radio" name="q1" value="4"> Quickly limiting</label>
       </div>
     </div>
 
@@ -39,8 +137,8 @@
       <p>2. Overall, how much do breathing issues affect your daily life?</p>
       <div class="options">
         <label><input type="radio" name="q2" value="0" required> Not at all</label>
-        <label><input type="radio" name="q2" value="1"> Occasionally</label>
-        <label><input type="radio" name="q2" value="2"> Frequently or significantly</label>
+        <label><input type="radio" name="q2" value="2"> Occasionally</label>
+        <label><input type="radio" name="q2" value="4"> Frequently or significantly</label>
       </div>
     </div>
 
@@ -134,7 +232,7 @@
       </div>
     </div>
 
-    <button type="submit">See My Results</button>
+    <button type="submit" class="submit-btn">See My Results</button>
   </form>
 
   <div id="result" class="result" style="display:none;"></div>
