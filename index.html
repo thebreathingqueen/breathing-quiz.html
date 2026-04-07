@@ -111,7 +111,6 @@ a:hover {
     padding: 25px 20px;
     margin: 20px 10px;
   }
-
   .quiz-container h1 {
     font-size: 2rem;
   }
@@ -125,7 +124,6 @@ a:hover {
   <p class="description">Welcome! This short quiz will help you gain insight into your breathing habits and patterns. Complete all questions to receive personalized guidance.</p>
 
   <form id="quizForm">
-    <!-- Question 1 -->
     <div class="question">
       <p>1. During activity or exercise, how does your breathing feel?</p>
       <div class="options">
@@ -135,7 +133,6 @@ a:hover {
       </div>
     </div>
 
-    <!-- Question 2 -->
     <div class="question">
       <p>2. Overall, how much do breathing issues affect your daily life?</p>
       <div class="options">
@@ -145,7 +142,6 @@ a:hover {
       </div>
     </div>
 
-    <!-- Question 3 -->
     <div class="question">
       <p>3. In the past 4 weeks, how often have you felt shortness of breath at rest or during mild activity?</p>
       <div class="options">
@@ -157,7 +153,6 @@ a:hover {
       </div>
     </div>
 
-    <!-- Question 4 -->
     <div class="question">
       <p>4. How often do you feel unable to take a satisfying breath?</p>
       <div class="options">
@@ -169,7 +164,6 @@ a:hover {
       </div>
     </div>
 
-    <!-- Question 5 -->
     <div class="question">
       <p>5. Do you mostly breathe through your mouth?</p>
       <div class="options">
@@ -178,7 +172,6 @@ a:hover {
       </div>
     </div>
 
-    <!-- Question 6 -->
     <div class="question">
       <p>6. When you breathe, which area moves more?</p>
       <div class="options">
@@ -188,7 +181,6 @@ a:hover {
       </div>
     </div>
 
-    <!-- Question 7 -->
     <div class="question">
       <p>7. Does stress or emotion make your breathing symptoms worse?</p>
       <div class="options">
@@ -197,7 +189,6 @@ a:hover {
       </div>
     </div>
 
-    <!-- Question 8 -->
     <div class="question">
       <p>8. Do your breathing symptoms affect your sleep?</p>
       <div class="options">
@@ -206,7 +197,6 @@ a:hover {
       </div>
     </div>
 
-    <!-- Question 9 -->
     <div class="question">
       <p>9. Do you avoid certain activities because of your breathing?</p>
       <div class="options">
@@ -215,7 +205,6 @@ a:hover {
       </div>
     </div>
 
-    <!-- Question 10 -->
     <div class="question">
       <p>10. Do you feel limited in exercise or daily tasks due to your breathing?</p>
       <div class="options">
@@ -224,7 +213,6 @@ a:hover {
       </div>
     </div>
 
-    <!-- Question 11 -->
     <div class="question">
       <p>11. Body Oxygen Level Test (BOLT): How many seconds can you comfortably hold your breath after a normal exhale?</p>
       <div class="options">
@@ -239,6 +227,21 @@ a:hover {
   </form>
 
   <div id="result" class="result" style="display:none;"></div>
+
+  <div id="programs-link" style="display:none; text-align:center; margin:30px auto; padding:30px; background:#FAF5E5; border-radius:20px; border:1px solid rgba(196,149,106,0.2);">
+    <p style="color:#9a7560; font-size:0.75rem; letter-spacing:3px; text-transform:uppercase; margin:0 0 10px;">Ready to take action?</p>
+    <h3 style="color:#8B5E3C; font-size:1.3rem; letter-spacing:1px; margin:0 0 15px;">Explore Your Breathing Programs</h3>
+    <p style="color:#4A3F38; font-size:0.95rem; line-height:1.7; margin:0 0 25px;">Now that you know your breathing type, discover the right program for you.</p>
+    <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
+      <a href="https://breathingqueen.com/#breathing-programs" style="display:inline-block; background:linear-gradient(135deg, #B07D55, #8B5E3C); color:#FDF6EE; padding:16px 35px; border-radius:50px; text-decoration:none; font-size:0.9rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; box-shadow:0 6px 20px rgba(139,94,60,0.3);">
+        View Programs
+      </a>
+      <a href="https://breathingqueen.com/my-account/" style="display:inline-block; background:transparent; color:#8B5E3C; padding:16px 35px; border-radius:50px; text-decoration:none; font-size:0.9rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; border:2px solid #8B5E3C;">
+        My Account
+      </a>
+    </div>
+  </div>
+
 </div>
 
 <script>
@@ -258,33 +261,22 @@ document.getElementById('quizForm').addEventListener('submit', function(e){
 
   if(totalScore <= 7){
     resultText = `<h2>Low Risk: ✅ Breathing Optimisation</h2>
-      <p>Your breathing appears generally healthy. The <strong>Breathing Optimisation Program</strong> is available to purchase to help you fine-tune your habits and maintain healthy breathing patterns.</p>
-      <p>Use discount code <strong>Breathe15</strong> for 15% off your program purchase!</p>`;
+      <p>Your breathing appears generally healthy. The <strong>Breathing Optimisation Program</strong> is available to purchase to help you fine-tune your habits and maintain healthy breathing patterns.</p>`;
   } else if(totalScore <= 16){
     resultText = `<h2>Medium Risk: ⚠️ Breathing Alignment</h2>
-      <p>Your breathing shows mild dysfunction. The <strong>Breathing Alignment Program</strong> is available to purchase to help restore efficient breathing patterns, improve energy, and reduce tension.</p>
-      <p>Use discount code <strong>Breathe15</strong> for 15% off your program purchase!</p>`;
+      <p>Your breathing shows mild dysfunction. The <strong>Breathing Alignment Program</strong> is available to purchase to help restore efficient breathing patterns, improve energy, and reduce tension.</p>`;
   } else {
     resultText = `<h2>High Risk: 🚨 Breathing Foundations</h2>
-      <p>Significant breathing dysfunction detected. The <strong>Breathing Foundations Program</strong> is available to purchase to provide structured guidance and restore healthy breathing patterns.</p>
-      <p>Use discount code <strong>Breathe15</strong> for 15% off your program purchase!</p>`;
+      <p>Significant breathing dysfunction detected. The <strong>Breathing Foundations Program</strong> is available to purchase to provide structured guidance and restore healthy breathing patterns.</p>`;
   }
 
   resultDiv.innerHTML = resultText;
   resultDiv.style.display = 'block';
+  document.getElementById('programs-link').style.display = 'block';
   window.scrollTo(0, document.body.scrollHeight);
 });
 </script>
 
-  <div style="text-align:center; margin:40px auto; padding:30px; max-width:600px; background:#FAF5E5; border-radius:20px; border:1px solid rgba(196,149,106,0.2); font-family:'Playfair Display', serif;">
-  <p style="color:#9a7560; font-size:0.75rem; letter-spacing:3px; text-transform:uppercase; margin:0 0 10px;">Ready to take action?</p>
-  <h3 style="color:#8B5E3C; font-size:1.3rem; letter-spacing:1px; margin:0 0 15px;">Explore Your Breathing Programs</h3>
-  <p style="color:#4A3F38; font-size:0.95rem; line-height:1.7; margin:0 0 25px;">Now that you know your breathing type, discover the right program for you.</p>
-  <a href="https://breathingqueen.com/#breathing-programs" style="display:inline-block; background:linear-gradient(135deg, #B07D55, #8B5E3C); color:#FDF6EE; padding:16px 35px; border-radius:50px; text-decoration:none; font-size:0.9rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; box-shadow:0 6px 20px rgba(139,94,60,0.3);">
-    View Programs
-  </a>
-</div>
-  
 </body>
 </html>
 
