@@ -260,14 +260,14 @@ document.getElementById('quizForm').addEventListener('submit', function(e){
   let resultText = '';
 
   if(totalScore <= 7){
-    resultText = `<h2>Low Risk: ✅ Breathing Optimisation</h2>
-      <p>Your breathing appears generally healthy. The <strong>Breathing Optimisation Program</strong> is available to purchase to help you fine-tune your habits and maintain healthy breathing patterns.</p>`;
+    resultText = `<h2>Low Risk: ✅ Level 3 — High Performance Breathing</h2>
+      <p>Your breathing appears generally healthy. The <strong>High Performance Breathing</strong> program is your next step — refine your breathing to support how you train, move, and handle stress at a higher level.</p>`;
   } else if(totalScore <= 16){
-    resultText = `<h2>Medium Risk: ⚠️ Breathing Alignment</h2>
-      <p>Your breathing shows mild dysfunction. The <strong>Breathing Alignment Program</strong> is available to purchase to help restore efficient breathing patterns, improve energy, and reduce tension.</p>`;
+    resultText = `<h2>Medium Risk: ⚠️ Level 2 — Breathing Reset Protocol</h2>
+      <p>Your breathing shows mild dysfunction. The <strong>Breathing Reset Protocol</strong> will help you restore proper ribcage movement, control, and coordination — so your breathing works automatically again.</p>`;
   } else {
-    resultText = `<h2>High Risk: 🚨 Breathing Foundations</h2>
-      <p>Significant breathing dysfunction detected. The <strong>Breathing Foundations Program</strong> is available to purchase to provide structured guidance and restore healthy breathing patterns.</p>`;
+    resultText = `<h2>High Risk: 🚨 Level 1 — Fix Your Air Hunger</h2>
+      <p>Significant breathing dysfunction detected. <strong>Fix Your Air Hunger</strong> is where you start — a simple, step-by-step process to reset your breathing so it finally feels normal and satisfying again.</p>`;
   }
 
   resultDiv.innerHTML = resultText;
