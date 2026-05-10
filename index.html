@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Breathing Pattern Dysfunction Quiz</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 body {
   background-color: #F5E8D0;
@@ -89,11 +89,135 @@ body {
 
 .result {
   margin-top: 30px;
-  padding: 25px;
+  padding: 28px;
   border-radius: 15px;
   background-color: #fff3e0;
   color: #4A3F38;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.result h2 {
+  color: #8B5E3C;
+  font-size: 1.5rem;
+  margin: 0 0 15px;
+  line-height: 1.3;
+}
+
+.result .program-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px 24px;
+  margin: 20px 0;
+  border-left: 4px solid #8B5E3C;
+  box-shadow: 0 4px 12px rgba(139,94,60,0.06);
+}
+
+.result .program-card.featured {
+  background: linear-gradient(135deg, #8B5E3C, #6B4426);
+  border-left: 4px solid #C9957A;
+  color: #fff9f2;
+}
+
+.result .program-card.featured h3 {
+  color: #fff9f2;
+}
+
+.result .program-card.featured p {
+  color: rgba(255,249,242,0.9);
+}
+
+.result .program-card.featured .price {
+  color: #fff9f2;
+}
+
+.result .program-card.featured .strikethrough {
+  color: rgba(255,249,242,0.5);
+}
+
+.result .program-card .badge {
+  display: inline-block;
+  background: rgba(255,249,242,0.18);
+  color: #fff9f2;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.result .program-card .badge.alt {
+  background: rgba(139,94,60,0.12);
+  color: #8B5E3C;
+}
+
+.result .program-card h3 {
+  color: #8B5E3C;
+  font-size: 1.2rem;
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.result .program-card p {
+  font-size: 0.95rem;
+  margin: 0 0 12px;
+  line-height: 1.7;
+}
+
+.result .program-card .price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #8B5E3C;
+  margin: 8px 0 14px;
+}
+
+.result .program-card .strikethrough {
+  font-size: 0.95rem;
+  text-decoration: line-through;
+  color: #9a7560;
+  margin-left: 8px;
+  font-weight: 400;
+}
+
+.result .cta-btn {
+  display: inline-block;
+  background: #fff9f2;
+  color: #8B5E3C;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-right: 8px;
+  margin-top: 4px;
+}
+
+.result .program-card:not(.featured) .cta-btn {
+  background: linear-gradient(135deg, #B07D55, #8B5E3C);
+  color: #fff9f2;
+  box-shadow: 0 4px 12px rgba(139,94,60,0.25);
+}
+
+.result .urgency {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #C9957A;
+  margin-top: 12px;
+  font-weight: 700;
+}
+
+.result .or-divider {
+  text-align: center;
+  margin: 18px 0 8px;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #9a7560;
 }
 
 a {
@@ -229,12 +353,12 @@ a:hover {
   <div id="result" class="result" style="display:none;"></div>
 
   <div id="programs-link" style="display:none; text-align:center; margin:30px auto; padding:30px; background:#FAF5E5; border-radius:20px; border:1px solid rgba(196,149,106,0.2);">
-    <p style="color:#9a7560; font-size:0.75rem; letter-spacing:3px; text-transform:uppercase; margin:0 0 10px;">Ready to take action?</p>
-    <h3 style="color:#8B5E3C; font-size:1.3rem; letter-spacing:1px; margin:0 0 15px;">Explore Your Breathing Programs</h3>
-    <p style="color:#4A3F38; font-size:0.95rem; line-height:1.7; margin:0 0 25px;">Now that you know your breathing type, discover the right program for you.</p>
+    <p style="color:#9a7560; font-size:0.75rem; letter-spacing:3px; text-transform:uppercase; margin:0 0 10px;">Want to see everything?</p>
+    <h3 style="color:#8B5E3C; font-size:1.3rem; letter-spacing:1px; margin:0 0 15px;">Explore All Breathing Programs</h3>
+    <p style="color:#4A3F38; font-size:0.95rem; line-height:1.7; margin:0 0 25px;">Compare the full range and find the right fit for where you are right now.</p>
     <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
       <a href="https://breathingqueen.com/#breathing-programs" style="display:inline-block; background:linear-gradient(135deg, #B07D55, #8B5E3C); color:#FDF6EE; padding:16px 35px; border-radius:50px; text-decoration:none; font-size:0.9rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; box-shadow:0 6px 20px rgba(139,94,60,0.3);">
-        View Programs
+        View All Programs
       </a>
       <a href="https://breathingqueen.com/my-account/" style="display:inline-block; background:transparent; color:#8B5E3C; padding:16px 35px; border-radius:50px; text-decoration:none; font-size:0.9rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; border:2px solid #8B5E3C;">
         My Account
@@ -260,23 +384,89 @@ document.getElementById('quizForm').addEventListener('submit', function(e){
   let resultText = '';
 
   if(totalScore <= 7){
-    resultText = `<h2>Low Risk: ✅ Level 3 — High Performance Breathing</h2>
-      <p>Your breathing appears generally healthy. The <strong>High Performance Breathing</strong> program is your next step — refine your breathing to support how you train, move, and handle stress at a higher level.</p>`;
+    // LOW RISK — generally healthy, optimisation territory
+    resultText = `
+      <h2>✅ Low Risk — Your breathing is in good shape</h2>
+      <p>Your breathing patterns look generally healthy. You're a great candidate for refining and optimising rather than fixing — and there are two paths forward.</p>
+
+      <div class="program-card">
+        <span class="badge alt">Recommended for you · Level 3</span>
+        <h3>High Performance Breathing</h3>
+        <p>Refine your breathing to support how you train, move, and handle stress at a higher level. Better recovery, sharper focus, more resilience.</p>
+        <div class="price">$69.99</div>
+        <a href="https://breathingqueen.com/checkout/?add-to-cart=380" class="cta-btn">Optimise My Breathing →</a>
+      </div>
+
+      <div class="or-divider">— Or go all-in —</div>
+
+      <div class="program-card featured">
+        <span class="badge">★ The Flagship · Just Launched</span>
+        <h3>The 8-Week Breathing Masterclass</h3>
+        <p>If you want the complete, structured method — with a 1:1 onboarding call from Naomh — this is it. The most comprehensive breathing transformation available.</p>
+        <div class="price">$297<span class="strikethrough">$397</span></div>
+        <a href="https://breathingqueen.com/checkout/?add-to-cart=1389" class="cta-btn">Join the Masterclass →</a>
+        <div class="urgency">⏰ Founding member price · First 72 hours only</div>
+      </div>
+    `;
   } else if(totalScore <= 16){
-    resultText = `<h2>Medium Risk: ⚠️ Level 2 — Breathing Reset Protocol</h2>
-      <p>Your breathing shows mild dysfunction. The <strong>Breathing Reset Protocol</strong> will help you restore proper ribcage movement, control, and coordination — so your breathing works automatically again.</p>`;
+    // MEDIUM RISK — mild dysfunction
+    resultText = `
+      <h2>⚠️ Medium Risk — Your breathing patterns need work</h2>
+      <p>Your results show mild breathing pattern dysfunction. Symptoms may come and go — and standard advice probably hasn't quite stuck. Here's where to go next.</p>
+
+      <div class="program-card featured">
+        <span class="badge">★ Best Match · Just Launched</span>
+        <h3>The 8-Week Breathing Masterclass</h3>
+        <p>This is exactly who the Masterclass is for. Eight structured weeks to fix the underlying patterns at the root, with a 1:1 onboarding call from Naomh so you start exactly where you need to.</p>
+        <div class="price">$297<span class="strikethrough">$397</span></div>
+        <a href="https://breathingqueen.com/checkout/?add-to-cart=1389" class="cta-btn">Join the Masterclass →</a>
+        <div class="urgency">⏰ Founding member price · First 72 hours only · Closes 24 May</div>
+      </div>
+
+      <div class="or-divider">— Or start smaller —</div>
+
+      <div class="program-card">
+        <span class="badge alt">Alternative · Level 2</span>
+        <h3>Breathing Reset Protocol</h3>
+        <p>A focused 4-week program to restore proper ribcage movement, control, and coordination — so your breathing works automatically again.</p>
+        <div class="price">$59.99</div>
+        <a href="https://breathingqueen.com/checkout/?add-to-cart=378" class="cta-btn">Fix It Properly →</a>
+      </div>
+    `;
   } else {
-    resultText = `<h2>High Risk: 🚨 Level 1 — Fix Your Air Hunger</h2>
-      <p>Significant breathing dysfunction detected. <strong>Fix Your Air Hunger</strong> is where you start — a simple, step-by-step process to reset your breathing so it finally feels normal and satisfying again.</p>`;
+    // HIGH RISK — significant dysfunction
+    resultText = `
+      <h2>🚨 High Risk — Significant breathing dysfunction detected</h2>
+      <p>Your results suggest meaningful breathing pattern dysfunction. The good news? This is exactly what Naomh works with every day — and it's fixable. You'll get the most relief from a structured approach with personal support.</p>
+
+      <div class="program-card featured">
+        <span class="badge">★ Strongly Recommended · Just Launched</span>
+        <h3>The 8-Week Breathing Masterclass</h3>
+        <p>For symptoms at this level, you need more than a quick fix. The Masterclass is the complete, step-by-step method — and it includes a 1:1 onboarding call with Naomh so your path is tailored to you. This is the most direct route to feeling better.</p>
+        <div class="price">$297<span class="strikethrough">$397</span></div>
+        <a href="https://breathingqueen.com/checkout/?add-to-cart=1389" class="cta-btn">Enrol in the Masterclass →</a>
+        <div class="urgency">⏰ Founding member price · First 72 hours only · Closes 24 May</div>
+      </div>
+
+      <div class="or-divider">— Or start with the basics —</div>
+
+      <div class="program-card">
+        <span class="badge alt">Entry Point · Level 1</span>
+        <h3>Fix Your Air Hunger</h3>
+        <p>If you're not ready for the full Masterclass yet, start here. A simple, step-by-step process to reset your breathing so it finally feels normal and satisfying again.</p>
+        <div class="price">$39.99</div>
+        <a href="https://breathingqueen.com/checkout/?add-to-cart=376" class="cta-btn">Start Here →</a>
+      </div>
+    `;
   }
 
   resultDiv.innerHTML = resultText;
   resultDiv.style.display = 'block';
   document.getElementById('programs-link').style.display = 'block';
-  window.scrollTo(0, document.body.scrollHeight);
+  // Scroll to results, not to the very bottom
+  resultDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 </script>
 
 </body>
 </html>
-
